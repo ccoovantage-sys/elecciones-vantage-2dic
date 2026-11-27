@@ -220,4 +220,846 @@
       display: inline-block;
       background: var(--ccoo-red);
       color: #fff;
-      font-size: 0.
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      margin-bottom: 0.65rem;
+    }
+
+    .widget-date {
+      font-size: 2.5rem;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 0.25rem;
+    }
+
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      margin: 1.15rem 0;
+    }
+
+    .cd-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.6rem 0.3rem;
+      border-radius: 8px;
+    }
+
+    .cd-num {
+      font-size: 1.45rem;
+      font-weight: 900;
+      display: block;
+    }
+
+    .cd-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+
+    /* Contenedor principal */
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+
+    /* Centro de descargas PDF destacado */
+    .docs-strip {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-md);
+      border-top: 5px solid var(--ccoo-red);
+      margin-top: -3.2rem;
+      margin-bottom: 3rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .docs-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .docs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1rem;
+    }
+
+    .doc-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.15rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #FAFBFC;
+      text-decoration: none;
+      color: var(--text-main);
+      transition: all 0.2s ease;
+    }
+
+    .doc-card:hover {
+      border-color: var(--ccoo-red);
+      background: #fff;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .doc-info strong {
+      display: block;
+      font-size: 0.96rem;
+      color: var(--vantage-dark);
+    }
+
+    .doc-info span {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .doc-pill {
+      background: var(--ccoo-red);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 0.35rem 0.7rem;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    .doc-pill.blue {
+      background: var(--vantage-blue);
+    }
+
+    /* Títulos de sección */
+    section {
+      margin-bottom: 3.75rem;
+    }
+
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .sec-bar {
+      width: 14px;
+      height: 28px;
+      border-radius: 3px;
+      background: var(--ccoo-red);
+      flex-shrink: 0;
+    }
+
+    .sec-bar.slate { background: var(--vantage-slate); }
+    .sec-bar.green { background: var(--accent-green); }
+
+    h2 {
+      font-size: 1.65rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .sec-desc {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 1.03rem;
+    }
+
+    /* Galería visual interactiva (Carteles e Infoguía) */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .poster-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .poster-thumb {
+      position: relative;
+      background: #E9ECEF;
+      cursor: pointer;
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .poster-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .poster-thumb:hover img {
+      transform: scale(1.03);
+    }
+
+    .zoom-hint {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(26, 30, 36, 0.85);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+    }
+
+    .poster-body {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .poster-body h3 {
+      font-size: 1.08rem;
+      font-weight: 800;
+    }
+
+    .poster-body p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .poster-links {
+      display: flex;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    .btn-small {
+      flex: 1;
+      text-align: center;
+      padding: 0.6rem 0.85rem;
+      border-radius: 7px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-red {
+      background: var(--ccoo-red);
+      color: #fff;
+    }
+
+    .btn-outline {
+      background: #fff;
+      color: var(--vantage-dark);
+      border: 1px solid #CBD2D9;
+    }
+
+    /* Pestañas interactivas del programa */
+    .tabs-nav {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.25rem;
+    }
+
+    .tab-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .tab-btn.active, .tab-btn:hover {
+      background: var(--ccoo-red);
+      color: #fff;
+      border-color: var(--ccoo-red);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .axis-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 1.45rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--vantage-slate);
+    }
+
+    .axis-card.hidden {
+      display: none;
+    }
+
+    .axis-card h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .axis-card ul {
+      padding-left: 1.2rem;
+      color: var(--text-muted);
+      font-size: 0.94rem;
+    }
+
+    .axis-card li {
+      margin-bottom: 0.35rem;
+    }
+
+    /* Experiencia y Candidatura */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .exp-card {
+      background: var(--surface);
+      padding: 1.4rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      border-left: 5px solid var(--ccoo-red);
+    }
+
+    .candidacy-panel {
+      background: linear-gradient(135deg, var(--ccoo-red) 0%, var(--ccoo-red-dark) 100%);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .cand-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.85rem 1.75rem;
+      margin-top: 1.25rem;
+    }
+
+    .cand-item {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .cand-num {
+      background: #fff;
+      color: var(--ccoo-red);
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    /* Independencia y Respaldo */
+    .info-panel {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 1.65rem;
+      box-shadow: var(--shadow-sm);
+      border-left: 6px solid var(--ccoo-red);
+    }
+
+    .info-panel ul {
+      list-style: none;
+    }
+
+    .info-panel li {
+      margin-bottom: 0.75rem;
+      padding-left: 1.3rem;
+      position: relative;
+    }
+
+    .info-panel li::before {
+      content: "•";
+      color: var(--ccoo-red);
+      font-weight: 900;
+      font-size: 1.35rem;
+      position: absolute;
+      left: 0;
+      top: -0.2rem;
+    }
+
+    /* Lightbox para ampliar imágenes */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(15, 18, 22, 0.92);
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 95%;
+      max-height: 90vh;
+      border-radius: 8px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 24px;
+      background: var(--ccoo-red);
+      color: #fff;
+      border: none;
+      font-size: 1.3rem;
+      font-weight: 900;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--ccoo-red-dark);
+      color: #fff;
+      text-align: center;
+      padding: 2.5rem 1.25rem;
+      border-top: 5px solid var(--vantage-dark);
+    }
+
+    footer .f-main {
+      font-size: 1.3rem;
+      font-weight: 900;
+      max-width: 820px;
+      margin: 0 auto 0.5rem;
+    }
+
+    footer .f-sub {
+      font-size: 1.05rem;
+      font-weight: 700;
+      opacity: 0.95;
+    }
+
+    @media (max-width: 820px) {
+      .hero {
+        background: linear-gradient(180deg, var(--ccoo-red) 0%, var(--vantage-dark) 100%);
+      }
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+      .docs-strip {
+        margin-top: -1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navegación -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logos">
+        <img src="LOGO%20CCOO.png" alt="Logo CCOO" />
+        <div class="nav-divider"></div>
+        <img src="LOGO%20VANTAGE%20TOWERS.png" alt="Logo Vantage Towers" />
+      </a>
+      <div class="nav-links">
+        <a href="#documentos">Documentación PDF</a>
+        <a href="#material-grafico">Carteles e Infoguía</a>
+        <a href="#programa">Programa</a>
+        <a href="#independencia">Independencia</a>
+        <a href="#candidatura" class="nav-btn-vota">Candidatura 2DIC</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-logos-box">
+          <img src="LOGO%20CCOO.png" alt="CCOO" />
+          <div class="hero-logos-sep"></div>
+          <img src="LOGO%20VANTAGE%20TOWERS.png" alt="Vantage Towers España" />
+        </div>
+        <h1>¡Ya lo demostramos en octubre. Ahora, hagámoslo permanente!</h1>
+        <p class="hero-slogan">“Queremos escucharte. Queremos representarte.”</p>
+        <div class="hero-actions">
+          <a href="#documentos" class="btn-primary">📄 Ver y descargar PDFs</a>
+          <a href="#material-grafico" class="btn-secondary">🖼️ Ver carteles e infoguía</a>
+        </div>
+      </div>
+
+      <div class="hero-widget">
+        <span class="widget-badge">Elecciones Sindicales · Vantage Towers SLU</span>
+        <div class="widget-date">2 DIC 2026</div>
+        <p style="font-size: 0.92rem; opacity: 0.9;">Cuenta atrás para la jornada electoral</p>
+        <div class="countdown-grid" id="countdown">
+          <div class="cd-box"><span class="cd-num" id="cd-days">--</span><span class="cd-label">Días</span></div>
+          <div class="cd-box"><span class="cd-num" id="cd-hours">--</span><span class="cd-label">Horas</span></div>
+          <div class="cd-box"><span class="cd-num" id="cd-mins">--</span><span class="cd-label">Min</span></div>
+          <div class="cd-box"><span class="cd-num" id="cd-secs">--</span><span class="cd-label">Seg</span></div>
+        </div>
+        <div style="font-weight: 800; letter-spacing: 0.6px; color: #FFD1D6;">CCOOntigo · VOTA CCOO</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Acceso directo a los 3 PDFs -->
+    <div class="docs-strip" id="documentos">
+      <div class="docs-title">📂 Documentación oficial de campaña (consulta directa o descarga en PDF)</div>
+      <div class="docs-grid">
+        <a href="Programa%20Electoral%20CCOO%20-%20Vantage%20Towers%20Espa%C3%B1a.pdf" target="_blank" rel="noopener" class="doc-card">
+          <div class="doc-info">
+            <strong>Programa Electoral CCOO</strong>
+            <span>Vantage Towers España · Documento completo</span>
+          </div>
+          <span class="doc-pill blue">Abrir PDF ↗</span>
+        </a>
+
+        <a href="Cartel%20Electoral%20VOTA%20CCOO%20-%20Vantage%20Towers%20SLU.pdf" target="_blank" rel="noopener" class="doc-card">
+          <div class="doc-info">
+            <strong>Cartel Electoral VOTA CCOO</strong>
+            <span>Edición completa con candidatura y estatutos</span>
+          </div>
+          <span class="doc-pill">Abrir PDF ↗</span>
+        </a>
+
+        <a href="CARTEL%20ELECTORAL%20CCOOVANTAGE.pdf" target="_blank" rel="noopener" class="doc-card">
+          <div class="doc-info">
+            <strong>Cartel Electoral CCOO Vantage</strong>
+            <span>Resumen ejecutivo de campaña · 2DIC</span>
+          </div>
+          <span class="doc-pill">Abrir PDF ↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Sección Material Gráfico y Carteles -->
+    <section id="material-grafico">
+      <div class="sec-head">
+        <div class="sec-bar"></div>
+        <h2>Infoguía y Carteles de Campaña</h2>
+      </div>
+      <p class="sec-desc">Haz clic sobre la imagen para ampliarla o abre directamente la versión en PDF para imprimir o compartir.</p>
+
+      <div class="gallery-grid">
+        <!-- Infoguía JPG -->
+        <article class="poster-card">
+          <div class="poster-thumb" onclick="openLightbox('PROGRAMA%20ELECTORAL%20CCOO%20VANTAGE%20TOWERS.jpg')">
+            <img src="PROGRAMA%20ELECTORAL%20CCOO%20VANTAGE%20TOWERS.jpg" alt="Infoguía Programa Electoral CCOO Vantage Towers" />
+            <span class="zoom-hint">🔍 Ampliar infoguía</span>
+          </div>
+          <div class="poster-body">
+            <div>
+              <h3>Infoguía Visual del Programa Electoral</h3>
+              <p>Los 8 ejes clave de trabajo y nuestro compromiso en 5 pasos con toda la plantilla.</p>
+            </div>
+            <div class="poster-links">
+              <button class="btn-small btn-outline" onclick="openLightbox('PROGRAMA%20ELECTORAL%20CCOO%20VANTAGE%20TOWERS.jpg')">Ampliar imagen</button>
+              <a href="Programa%20Electoral%20CCOO%20-%20Vantage%20Towers%20Espa%C3%B1a.pdf" target="_blank" class="btn-small btn-red">Ver Programa PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cartel VOTA CCOO PDF con vista previa embebida -->
+        <article class="poster-card">
+          <div class="poster-thumb" style="background: #2B323B;">
+            <iframe src="Cartel%20Electoral%20VOTA%20CCOO%20-%20Vantage%20Towers%20SLU.pdf#toolbar=0&navpanes=0" title="Cartel Electoral VOTA CCOO" style="width:100%; height:100%; border:none;"></iframe>
+          </div>
+          <div class="poster-body">
+            <div>
+              <h3>Cartel Electoral VOTA CCOO (Completo)</h3>
+              <p>Experiencia demostrada en la MSCT, lista completa de 8 candidatos e independencia estatutaria.</p>
+            </div>
+            <div class="poster-links">
+              <a href="Cartel%20Electoral%20VOTA%20CCOO%20-%20Vantage%20Towers%20SLU.pdf" target="_blank" class="btn-small btn-red">Abrir Cartel PDF</a>
+              <a href="Cartel%20Electoral%20VOTA%20CCOO%20-%20Vantage%20Towers%20SLU.pdf" download class="btn-small btn-outline">Descargar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cartel CCOO Vantage PDF con vista previa embebida -->
+        <article class="poster-card">
+          <div class="poster-thumb" style="background: #2B323B;">
+            <iframe src="CARTEL%20ELECTORAL%20CCOOVANTAGE.pdf#toolbar=0&navpanes=0" title="Cartel Electoral CCOO Vantage" style="width:100%; height:100%; border:none;"></iframe>
+          </div>
+          <div class="poster-body">
+            <div>
+              <h3>Cartel Electoral CCOO Vantage (2DIC)</h3>
+              <p>Cartel síntesis de logros en octubre, proyecto de futuro y respaldo técnico-jurídico.</p>
+            </div>
+            <div class="poster-links">
+              <a href="CARTEL%20ELECTORAL%20CCOOVANTAGE.pdf" target="_blank" class="btn-small btn-red">Abrir Cartel PDF</a>
+              <a href="CARTEL%20ELECTORAL%20CCOOVANTAGE.pdf" download class="btn-small btn-outline">Descargar</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección Experiencia -->
+    <section id="experiencia">
+      <div class="sec-head">
+        <div class="sec-bar"></div>
+        <h2>Nuestra Experiencia Demostrada</h2>
+      </div>
+      <p class="sec-desc">Miembros de la lista de CCOO lideraron la negociación de la Modificación Sustancial de Condiciones de Trabajo en octubre con el respaldo del sindicato.</p>
+
+      <div class="grid-3">
+        <div class="exp-card">
+          <h3>📈 Mejoras significativas</h3>
+          <p>Logramos avances sustanciales frente a las pretensiones iniciales de la empresa.</p>
+        </div>
+        <div class="exp-card">
+          <h3>🛡️ Blindar derechos adquiridos</h3>
+          <p>Garantizamos la protección efectiva de las condiciones consolidadas de la plantilla.</p>
+        </div>
+        <div class="exp-card">
+          <h3>💶 Futuras revisiones salariales</h3>
+          <p>Aseguramos la participación activa de la representación laboral en las revisiones salariales.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Programa Interactivo -->
+    <section id="programa">
+      <div class="sec-head">
+        <div class="sec-bar slate"></div>
+        <h2>8 Ejes del Programa Electoral</h2>
+      </div>
+      <p class="sec-desc">Filtra por bloque o consulta todas nuestras propuestas para Vantage Towers España.</p>
+
+      <div class="tabs-nav">
+        <button class="tab-btn active" onclick="filterAxes('all', this)">Todos (8)</button>
+        <button class="tab-btn" onclick="filterAxes('condiciones', this)">Salario y Conciliación</button>
+        <button class="tab-btn" onclick="filterAxes('futuro', this)">Futuro, IA y Cambios</button>
+        <button class="tab-btn" onclick="filterAxes('bienestar', this)">Igualdad y Salud</button>
+        <button class="tab-btn" onclick="filterAxes('cercania', this)">Transparencia y Escucha</button>
+      </div>
+
+      <div class="grid-2" id="axes-container">
+        <article class="axis-card" data-cat="cercania">
+          <h3>💬 Más información, menos incertidumbre</h3>
+          <ul>
+            <li>Contarte qué temas se están tratando y negociando.</li>
+            <li>Explicar los acuerdos alcanzados y también cuando algo no se consiga y por qué.</li>
+            <li>Canales sencillos para hacernos llegar dudas, problemas o propuestas.</li>
+          </ul>
+        </article>
+
+        <article class="axis-card" data-cat="condiciones">
+          <h3>💰 Salario y condiciones laborales</h3>
+          <ul>
+            <li>Defender el poder adquisitivo y buscar mejoras salariales.</li>
+            <li>Pedir mayor claridad en los criterios de revisiones salariales.</li>
+            <li>Revisar beneficios sociales y detectar situaciones de sobrecarga de trabajo.</li>
+          </ul>
+        </article>
+
+        <article class="axis-card" data-cat="condiciones">
+          <h3>🏠 Teletrabajo, flexibilidad y conciliación</h3>
+          <ul>
+            <li>Defender el teletrabajo, la conciliación personal/familiar y la flexibilidad horaria.</li>
+            <li>Garantizar el derecho real a la desconexión digital al terminar la jornada.</li>
+            <li>Diálogo con la plantilla ante cualquier cambio de presencialidad.</li>
+          </ul>
+        </article>
+
+        <article class="axis-card" data-cat="futuro">
+          <h3>🚀 Crecer dentro de Vantage</h3>
+          <ul>
+            <li>Mayor visibilidad de vacantes internas y criterios claros de promoción.</li>
+            <li>Formación accesible para todos y reconocimiento de la experiencia.</li>
+            <li>Acompañar la automatización y la IA como oportunidad profesional, no incertidumbre.</li>
+          </ul>
+        </article>
+
+        <article class="axis-card" data-cat="futuro">
+          <h3>🔄 Ante los cambios, queremos tener voz</h3>
+          <ul>
+            <li>Información suficiente y previa ante reorganizaciones o externalizaciones.</li>
+            <li>Defender puestos y condiciones de trabajo planteando alternativas.</li>
+            <li>Seguimiento estricto de los compromisos alcanzados.</li>
+          </ul>
+        </article>
+
+        <article class="axis-card" data-cat="bienestar">
+          <h3>⚖️ Igualdad: mismos derechos y oportunidades</h3>
+          <ul>
+            <li>Presencia directa en el <strong>I Plan de Igualdad</strong> (único sindicato en la mesa).</li>
+            <li>Igualdad salarial y profesional, con procesos de promoción justos.</li>
+            <li>Prevención frente a discriminación o acoso y seguimiento efectivo.</li>
+          </ul>
+        </article>
+
+        <article class="axis-card" data-cat="bienestar">
+          <h3>❤️ Trabajar bien es también estar bien</h3>
+          <ul>
+            <li>Prevenir sobrecargas de trabajo prolongadas, estrés y riesgos psicosociales.</li>
+            <li>Cuidar la ergonomía, la desconexión digital y el bienestar diario.</li>
+            <li>Detectar problemas antes de que se conviertan en algo serio.</li>
+          </ul>
+        </article>
+
+        <article class="axis-card" data-cat="cercania">
+          <h3>🤝 Y, sobre todo, queremos escucharte</h3>
+          <ul>
+            <li>¿Qué mejorarías? ¿Qué te preocupa? ¿Qué funciona bien y debemos proteger?</li>
+            <li>No elaborar propuestas desde un despacho sin contar con la plantilla.</li>
+            <li>Claridad total: qué se puede resolver y qué toca negociar.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección Independencia -->
+    <section id="independencia">
+      <div class="sec-head">
+        <div class="sec-bar"></div>
+        <h2>Independencia y Autonomía (Según Estatuto CCOO)</h2>
+      </div>
+      <div class="info-panel">
+        <ul>
+          <li><strong>Independencia política y de actuación:</strong> sin injerencias de partidos políticos, poderes económicos ni intereses ajenos. Además, los Estatutos de CCOO prohíben compatibilizar cargos de dirección sindical con cargos políticos o públicos.</li>
+          <li><strong>Autonomía en la empresa:</strong> la sección sindical decide y ejerce la acción sindical en Vantage Towers de forma democrática, contando siempre con el asesoramiento técnico y jurídico de CCOO.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sección Candidatura -->
+    <section id="candidatura">
+      <div class="sec-head">
+        <div class="sec-bar"></div>
+        <h2>Nuestra Candidatura CCOO</h2>
+      </div>
+      <div class="candidacy-panel">
+        <p style="font-weight: 600; opacity: 0.95;">Lista de candidatos y candidatas de CCOO para el Comité de Empresa de Vantage Towers SLU:</p>
+        <div class="cand-grid">
+          <div class="cand-item"><span class="cand-num">1</span> ANTONIO RAPOSO VIDAL</div>
+          <div class="cand-item"><span class="cand-num">2</span> VICTOR MANUEL MOLINA SANCHEZ</div>
+          <div class="cand-item"><span class="cand-num">3</span> JOSE FRENICHE PALENZUELA</div>
+          <div class="cand-item"><span class="cand-num">4</span> FRANCISCO JAVIER PEREZ BARRIENTOS</div>
+          <div class="cand-item"><span class="cand-num">5</span> AINGERU CANO GUZMAN</div>
+          <div class="cand-item"><span class="cand-num">6</span> JESUS SEPULVEDA BENADERO</div>
+          <div class="cand-item"><span class="cand-num">7</span> FRANCISCO JOSE CANTERO SOME</div>
+          <div class="cand-item"><span class="cand-num">8</span> ANA MARIA LAMAS MARTINEZ</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Visor ampliado (Lightbox) -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Cerrar">✕</button>
+    <img id="lightbox-img" src="" alt="Vista ampliada" />
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    <p class="f-main">El 2DIC vota experiencia demostrada y respaldo real e independiente. VOTA CCOO.</p>
+    <p class="f-sub">DINOS CÓMO PODEMOS AYUDARTE.</p>
+  </footer>
+
+  <script>
+    // Cuenta atrás hacia el 2 de diciembre de 2026 a las 09:00
+    function updateCountdown() {
+      const electionDate = new Date("2026-12-02T09:00:00").getTime();
+      const now = new Date().getTime();
+      const diff = electionDate - now;
+
+      if (diff <= 0) {
+        document.getElementById("countdown").innerHTML =
+          '<div style="grid-column: 1 / -1; font-weight: 900; font-size: 1.2rem; padding: 0.5rem;">¡HOY ES EL DÍA! VOTA CCOO</div>';
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById("cd-days").textContent = String(days).padStart(2, "0");
+      document.getElementById("cd-hours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("cd-mins").textContent = String(mins).padStart(2, "0");
+      document.getElementById("cd-secs").textContent = String(secs).padStart(2, "0");
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Filtro de pestañas del programa
+    function filterAxes(category, btn) {
+      document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      document.querySelectorAll(".axis-card").forEach(card => {
+        if (category === "all" || card.dataset.cat === category) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+    }
+
+    // Lightbox para ampliar imágenes
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").classList.add("open");
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === "lightbox" || e.target.classList.contains("lightbox-close")) {
+        document.getElementById("lightbox").classList.remove("open");
+      }
+    }
+  </script>
+</body>
+</html>
